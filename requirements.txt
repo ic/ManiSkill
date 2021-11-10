@@ -1,0 +1,8 @@
+gym
+pyyaml
+sapien
+transforms3d
+scipy
+open3d
+trimesh
+shapely
