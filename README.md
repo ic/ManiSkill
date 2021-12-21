@@ -52,6 +52,7 @@ This README describes how to install ManiSkill, how to run a basic example, and 
 
 
 ## Updates and Announcements
+- Nov 15, 2021: We provided a detailed explanation of the action space, see [here](https://github.com/haosulab/ManiSkill/wiki/Detailed-Explanation-of-Action).
 - Nov 6, 2021: We provided a more detailed explanation of the observations, see [here](https://github.com/haosulab/ManiSkill/wiki/Detailed-Explanation-of-The-Agent-State-Vector).
 - Oct 11, 2021: ManiSkill has been accepted to **NeurIPS 2021 Track on Datasets and Benchmarks**!
 - Sep 5, 2021: The treatment of background points in observations are slightly different in the demonstration data and our old environments. We have changed the environments so that the background treatment matches exactly. Please pull the latest codes from the ManiSkill repo and rerun the evaluation scripts to measure performance. You do not need to update the demonstration data or retrain an existing model if it has been trained solely on our demonstration data (but you need to re-evaluate the model).
@@ -219,7 +220,7 @@ These environments can be constructed by changing the environment name passed to
 The state of the robot is a vector, and the action is also a vector. We have implemented modules compiling the state of the robot into a vector, and modules converting the action vector into the robot control signals. 
 While you do not need to worry about them, the details are provided below in case of you are curious.
 All the tasks in ManiSkill use similar robots, which are composed of three parts: moving platform, Sciurus robot body, and one or two Franka Panda arm(s). The moving platform can move and rotate on the ground plane, and its height is also adjustable. The robot body is fixed on top of the platform, providing support for the arms. Depending on the task, one or two robot arm(s) are connected to the robot body. There are 22 joints in the dual-arm robot and 13 for the single-arm robot.
-To match with the realistic robotics setup, we use PID controllers to control the joints of the robots. The robot fingers use position controllers, while all other joints, including the moving platform joints and the arm joints, use velocity controllers. The controllers are internally implemented as augmented PD and PID controllers. The action space corresponds to the normalized target values of all controllers.
+To match with the realistic robotics setup, we use PID controllers to control the joints of the robots. The robot fingers use position controllers, while all other joints, including the moving platform joints and the arm joints, use velocity controllers. The controllers are internally implemented as augmented PD and PID controllers. The action space corresponds to the normalized target values of all controllers. A detailed exaplanation of the action space can be found [here](https://github.com/haosulab/ManiSkill/wiki/Detailed-Explanation-of-Action).
 
 We also provide another action interface based on operational space control, please see [Operational Space Control](#operational-space-control) for more details.
 
@@ -409,10 +410,10 @@ We thank Qualcomm for sponsoring the associated challenge, Sergey Levine and Ash
 
 ## Citation
 ```
-@article{mu2021maniskill,
+@inproceedings{mu2021maniskill,
   title={ManiSkill: Generalizable Manipulation Skill Benchmark with Large-Scale Demonstrations},
-  author={Mu, Tongzhou and Ling, Zhan and Xiang, Fanbo and Yang, Derek and Li, Xuanlin, and Tao, Stone and Huang, Zhiao and Jia, Zhiwei and Su, Hao},
-  journal={arXiv preprint arXiv:2107.14483},
+  author={Mu, Tongzhou and Ling, Zhan and Xiang, Fanbo and Yang, Derek Cathera and Li, Xuanlin and Tao, Stone and Huang, Zhiao and Jia, Zhiwei and Su, Hao},
+  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},
   year={2021}
 }
 ```
