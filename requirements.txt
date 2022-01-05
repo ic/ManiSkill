@@ -1,10 +1,11 @@
 gym
-pyyaml
-sapien
-transforms3d
-scipy
 open3d
-trimesh
+pyyaml
+rtree
+sapien
+scipy
 shapely
+transforms3d
+trimesh
 
 ext/muzero-general
