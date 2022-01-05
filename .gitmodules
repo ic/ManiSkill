@@ -1,0 +1,4 @@
+[submodule "muzero-general"]
+	path = ext/muzero-general
+	url = git@github.com:ic/muzero-general.git
+	branch = maniskill

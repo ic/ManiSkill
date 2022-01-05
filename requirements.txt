@@ -6,3 +6,5 @@ scipy
 open3d
 trimesh
 shapely
+
+ext/muzero-general
