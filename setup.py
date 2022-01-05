@@ -9,6 +9,7 @@ setup(
         "gym",
         "open3d",
         "pyyaml",
+        "rtree",
         "sapien",
         "scipy",
         "shapely",
